@@ -174,9 +174,12 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Dependencies\HelloWorldMessageSource.cs" />
+    <Compile Include="Dependencies\IMessageSource.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ApplicationCastleInstaller.cs" />
     <Compile Include="Infrastructure\CastleDependencyResolver.cs" />
     <Compile Include="Infrastructure\CastleDependencyScope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

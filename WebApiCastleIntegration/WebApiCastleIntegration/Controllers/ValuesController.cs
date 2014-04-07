@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using WebApiCastleIntegration.Dependencies;
 
 namespace WebApiCastleIntegration.Controllers
 {
     public class ValuesController : ApiController
     {
+        public IMessageSource MessageSource { get; set; }
+
         // GET api/values
         public IEnumerable<string> Get()
         {
@@ -18,7 +17,7 @@ namespace WebApiCastleIntegration.Controllers
         // GET api/values/5
         public string Get(int id)
         {
-            return "value";
+            return string.Format("{0} - id:{1}", MessageSource.GetMessage(), id);
         }
 
         // POST api/values
