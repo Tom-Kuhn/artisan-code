@@ -23,7 +23,7 @@ namespace WebApiCastleIntegration
             var container = new WindsorContainer();
             container.Install(new ApplicationCastleInstaller());
 
-            // Configure WebApi to use a new CastleDependencyResolver as it's dependency resolver
+            // Configure WebApi to use a new CastleDependencyResolver as its dependency resolver
             GlobalConfiguration.Configuration.DependencyResolver = new CastleDependencyResolver(container);
 
             // Configure WebApi to use the newly configured GlobalConfiguration complete with Castle dependency resolver
