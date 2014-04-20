@@ -93,7 +93,7 @@ namespace WebApiCastleIntegration.Infrastructure
         /// </returns>
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            // Not expected to trow an exception, rather return an empty IEnumerable.
+            // Not expected to throw an exception, rather return an empty IEnumerable.
             return Container.ResolveAll(serviceType).Cast<object>();
         }
 
